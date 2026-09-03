@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air-Conditioned Gym — RV Fitness Selaiyur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;800;900&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--panel:#faf7f5;--line:#e7e1db;--ink:#161311;--sub:#6f6660;--red:#e2231a;--orange:#f7941d;--grad:linear-gradient(90deg,var(--orange),var(--red))}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif}
+h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
+.logo img{height:52px}
+.navlinks{display:flex;gap:28px;font-size:13px;font-weight:700}
+.navlinks a.active{color:var(--red)}
+.hero-box{padding:160px 5vw 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero-box h1{font-size:clamp(44px,6.8vw,90px);line-height:.95}
+.hero-box p{color:var(--sub);font-size:16px;line-height:1.7;margin:22px 0 30px;max-width:500px}
+.img-wrap{border-radius:4px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.img-wrap img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:80px 5vw;background:var(--panel)}
+.feature-card{background:#fff;padding:34px;border:1px solid var(--line);border-radius:3px}
+.feature-card h3{font-size:24px;margin-bottom:12px;color:var(--red)}
+.feature-card p{color:var(--sub);font-size:14px;line-height:1.6}
+.btn{padding:14px 28px;font-weight:700;font-size:13px;letter-spacing:.1em;border-radius:2px;background:var(--grad);color:#fff;display:inline-block}
+@media(max-width:900px){.navlinks{display:none}.hero-box,.feature-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><a href="index.html"><img src="logo (2).png" alt="RV Fitness"></a></div>
+  <div class="navlinks">
+    <a href="index.html">Flagship (11,000 Sq Ft)</a>
+    <a href="crossfit.html">CrossFit Box</a>
+    <a href="ac-gym.html" class="active">AC Gym</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="contact.html" class="btn">Free Pass</a>
+</nav>
+
+<section class="hero-box">
+  <div>
+    <h3 style="color:var(--orange);font-size:14px;letter-spacing:.25em;margin-bottom:12px">LOCATION 03 · SELAIYUR</h3>
+    <h1>CLIMATE CONTROLLED<br><span style="color:var(--red)">PREMIUM AC GYM.</span></h1>
+    <p>Train in comfort through Chennai's heat. Our fully air-conditioned Selaiyur facility pairs clean air filtration with selectorized pin circuits and cardio units.</p>
+    <a href="contact.html" class="btn">REQUEST AC GYM PASS</a>
+  </div>
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=80" alt="AC Gym Floor">
+  </div>
+</section>
+
+<section class="feature-grid">
+  <div class="feature-card">
+    <h3>High-Efficiency Climate Control</h3>
+    <p>Multi-split industrial AC setup maintaining optimal 21°C core room temperature even in peak May summer months.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Cardio Theatre Zone</h3>
+    <p>Treadmills, cross trainers, and spin bikes equipped with entertainment monitors and heart-rate telemetry.</p>
+  </div>
+  <div class="feature-card">
+    <h3>Private Locker Suites</h3>
+    <p>Sanitized showers, secure RFID storage lockers, and dedicated changing stations for pre-work routines.</p>
+  </div>
+</section>
+</body>
+</html>
