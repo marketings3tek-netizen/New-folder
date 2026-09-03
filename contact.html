@@ -2,38 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>Contact RV Fitness World | Selaiyur, Tambaram</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff;--panel:#faf7f5;--line:#e7e1db;--ink:#161311;--sub:#6f6660;--red:#e2231a;--orange:#f7941d;--grad:linear-gradient(90deg,var(--orange),var(--red))}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif}
-h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase}
+html,body{overflow-x:hidden;width:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase;line-height:.95}
 a{color:inherit;text-decoration:none}
-nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line)}
-.logo img{height:52px}
-.navlinks{display:flex;gap:28px;font-size:13px;font-weight:700}
+img{max-width:100%;height:auto;display:block}
+
+nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo img{height:46px;width:auto}
+.navlinks{display:flex;gap:24px;font-size:13px;letter-spacing:.06em;font-weight:700}
 .navlinks a.active{color:var(--red)}
-.contact-wrap{padding:150px 5vw 80px;display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
-.contact-info h1{font-size:clamp(40px,5vw,72px);margin-bottom:20px}
-.contact-info p{color:var(--sub);font-size:15px;line-height:1.7}
-.loc-card{margin-top:30px;padding:24px;border:1px solid var(--line);border-radius:3px;background:var(--panel)}
-.loc-card h3{font-size:22px;color:var(--red);margin-bottom:8px}
-.form-card{padding:40px;background:var(--panel);border:1px solid var(--line);border-radius:4px}
-.form-card h2{font-size:36px;margin-bottom:14px}
-form{display:flex;flex-direction:column;gap:18px;margin-top:20px}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.navcta{border:1px solid var(--red);padding:8px 18px;font-size:12px;font-weight:700;border-radius:2px;background:var(--red);color:#fff;white-space:nowrap}
+.hamburger{display:none;width:32px;height:32px;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:2px}
+.hamburger span{width:22px;height:2px;background:var(--ink);transition:.3s}
+
+.mob-menu{position:fixed;top:62px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--line);padding:24px 5vw;display:flex;flex-direction:column;gap:18px;transform:translateY(-120%);transition:transform .3s ease;z-index:499;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+.mob-menu.open{transform:translateY(0)}
+.mob-menu a{font-size:15px;font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--line)}
+
+.contact-wrap{padding:120px 5vw 60px;display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.contact-info h1{font-size:clamp(36px,5.5vw,64px);margin-bottom:16px}
+.contact-info p{color:var(--sub);font-size:14px;line-height:1.65}
+.loc-card{margin-top:20px;padding:20px;border:1px solid var(--line);border-radius:3px;background:var(--panel)}
+.loc-card h3{font-size:18px;color:var(--red);margin-bottom:6px}
+.loc-card p{font-size:13px;color:var(--sub);line-height:1.5}
+
+.form-card{padding:30px 24px;background:var(--panel);border:1px solid var(--line);border-radius:4px}
+.form-card h2{font-size:28px;margin-bottom:10px}
+form{display:flex;flex-direction:column;gap:16px;margin-top:16px}
 .field{display:flex;flex-direction:column;gap:6px}
-.field label{font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.05em}
-.field input,.field select{padding:14px;border:1px solid var(--line);background:#fff;border-radius:2px;font-family:inherit}
-.btn{background:var(--grad);color:#fff;border:none;padding:16px;font-weight:700;font-size:14px;letter-spacing:.1em;border-radius:2px;cursor:pointer}
-@media(max-width:900px){.navlinks{display:none}.contact-wrap{grid-template-columns:1fr}}
+.field label{font-size:11px;font-weight:700;color:var(--sub);letter-spacing:.05em}
+.field input,.field select{padding:12px;border:1px solid var(--line);background:#fff;border-radius:2px;font-family:inherit;font-size:14px}
+.btn{background:var(--grad);color:#fff;border:none;padding:14px;font-weight:700;font-size:13px;letter-spacing:.08em;border-radius:2px;cursor:pointer;text-align:center}
+
+@media(max-width:880px){
+  .navlinks{display:none}
+  .hamburger{display:flex}
+  .contact-wrap{grid-template-columns:1fr;padding-top:90px;gap:28px}
+  .form-card{padding:24px 18px}
+}
 </style>
 </head>
 <body>
 <nav>
-  <div class="logo"><a href="index.html"><img src="logo (2).png" alt="RV Fitness"></a></div>
+  <div class="logo"><a href="index.html"><img src="logo (2).png" alt="RV Fitness World"></a></div>
   <div class="navlinks">
     <a href="index.html">Flagship (11,000 Sq Ft)</a>
     <a href="crossfit.html">CrossFit Box</a>
@@ -41,31 +61,45 @@ form{display:flex;flex-direction:column;gap:18px;margin-top:20px}
     <a href="about.html">About Us</a>
     <a href="contact.html" class="active">Contact</a>
   </div>
+  <div class="nav-actions">
+    <a class="navcta" href="contact.html">Free Pass</a>
+    <button class="hamburger" id="hamBtn" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">Flagship Floor (11,000 Sq Ft)</a>
+  <a href="crossfit.html">CrossFit Box Branch</a>
+  <a href="ac-gym.html">AC Gym Branch</a>
+  <a href="about.html">About RV Fitness</a>
+  <a href="contact.html">Contact & Directions</a>
+</div>
 
 <div class="contact-wrap">
   <div class="contact-info">
-    <h3 style="color:var(--orange);font-size:13px;letter-spacing:.25em;margin-bottom:10px">GET IN TOUCH</h3>
+    <h3 style="color:var(--orange);font-size:12px;letter-spacing:.25em;margin-bottom:8px">GET IN TOUCH</h3>
     <h1>VISIT OUR GYMS IN SELAIYUR.</h1>
-    <p>Have questions about memberships or want to schedule a walkthrough of the 11,000 sq ft main floor? Contact us or drop by during operating hours.</p>
+    <p>Have questions about memberships or want to schedule a walkthrough of the 11,000 sq ft main floor[cite: 1]? Contact us or drop by during operating hours[cite: 1].</p>
 
     <div class="loc-card">
       <h3>Flagship (11,000 Sq Ft)</h3>
-      <p>No:26/25, 2nd Floor, Agaram Main Rd, Ranganatha Nagar, Balaji Nagar, Selaiyur, Chennai 600073</p>
-      <p style="margin-top:10px;font-weight:700">Phone: +91 99628 86575</p>
-      <p>Email: rvfitnessselaiyur@gmail.com</p>
+      <p>No:26/25, 2nd Floor, Agaram Main Rd, Ranganatha Nagar, Balaji Nagar, Selaiyur, Chennai 600073[cite: 1]</p>
+      <p style="margin-top:8px;font-weight:700;color:var(--ink)">Phone: +91 99628 86575[cite: 1]</p>
+      <p>Email: rvfitnessselaiyur@gmail.com[cite: 1]</p>
     </div>
 
     <div class="loc-card">
       <h3>CrossFit Box & AC Gym Branches</h3>
       <p>Conveniently located within Selaiyur for functional group classes and air-conditioned training.</p>
-      <p style="margin-top:6px;font-weight:700">Hours: Mon – Sun (06:00 – 22:00)</p>
+      <p style="margin-top:6px;font-weight:700;color:var(--ink)">Hours: Mon – Sun (06:00 – 22:00)[cite: 1]</p>
     </div>
   </div>
 
   <div class="form-card">
     <h2>Book A Free Trial Visit</h2>
-    <p style="color:var(--sub);font-size:14px">Fill in your details to receive an instant guest pass to train at RV Fitness World.</p>
+    <p style="color:var(--sub);font-size:13px">Fill in your details to receive an instant guest pass to train at RV Fitness World.</p>
     <form onsubmit="event.preventDefault();alert('Pass requested! We will call you within 24 hours.')">
       <div class="field">
         <label>FULL NAME</label>
@@ -87,5 +121,12 @@ form{display:flex;flex-direction:column;gap:18px;margin-top:20px}
     </form>
   </div>
 </div>
+
+<script>
+const hamBtn = document.getElementById('hamBtn');
+const mobMenu = document.getElementById('mobMenu');
+hamBtn.addEventListener('click', () => mobMenu.classList.toggle('open'));
+mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobMenu.classList.remove('open')));
+</script>
 </body>
 </html>

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>About Us — Our Story & Philosophy | RV Fitness World Chennai</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#ffffff; --panel:#faf7f5; --panel2:#f3efec; --line:#e7e1db;
@@ -14,71 +14,65 @@
   --grad:linear-gradient(90deg,var(--orange),var(--red));
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;overflow-x:hidden}
-h1,h2,h3,.disp{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:.01em;text-transform:uppercase}
+html,body{overflow-x:hidden;width:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;-webkit-tap-highlight-color:transparent}
+h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:.01em;text-transform:uppercase;line-height:.95}
 a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 
-/* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.logo img{height:52px;width:auto}
-.navlinks{display:flex;gap:28px;font-size:13px;letter-spacing:.08em;font-weight:700}
-.navlinks a:hover{color:var(--red)}
+.logo img{height:46px;width:auto}
+.navlinks{display:flex;gap:24px;font-size:13px;letter-spacing:.06em;font-weight:700}
 .navlinks a.active{color:var(--red)}
-.navcta{border:1px solid var(--red);padding:9px 20px;font-size:12px;letter-spacing:.1em;font-weight:700;border-radius:2px;background:var(--red);color:#fff;transition:.3s}
-.navcta:hover{background:transparent;color:var(--red)}
-@media(max-width:900px){.navlinks{display:none}}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.navcta{border:1px solid var(--red);padding:8px 18px;font-size:12px;font-weight:700;border-radius:2px;background:var(--red);color:#fff;white-space:nowrap}
+.hamburger{display:none;width:32px;height:32px;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:none;cursor:pointer;padding:2px}
+.hamburger span{width:22px;height:2px;background:var(--ink);transition:.3s}
 
-/* ---------- page header ---------- */
-.about-header{padding:160px 5vw 80px;background:var(--panel);border-bottom:1px solid var(--line)}
-.eyebrow{font-size:12px;letter-spacing:.3em;color:var(--orange);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:12px}
-.eyebrow::before{content:'';width:32px;height:1px;background:var(--orange)}
-.about-header h1{font-size:clamp(46px,7.5vw,100px);line-height:.92;max-width:1100px}
-.about-header p{margin-top:24px;font-size:18px;color:var(--sub);max-width:680px;line-height:1.7}
+.mob-menu{position:fixed;top:62px;left:0;width:100%;background:#fff;border-bottom:1px solid var(--line);padding:24px 5vw;display:flex;flex-direction:column;gap:18px;transform:translateY(-120%);transition:transform .3s ease;z-index:499;box-shadow:0 10px 25px rgba(0,0,0,.06)}
+.mob-menu.open{transform:translateY(0)}
+.mob-menu a{font-size:15px;font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--line)}
 
-/* ---------- story section ---------- */
-.story-section{padding:100px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-header{padding:120px 5vw 50px;background:var(--panel);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:11px;letter-spacing:.25em;color:var(--orange);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:'';width:24px;height:1px;background:var(--orange)}
+.about-header h1{font-size:clamp(36px,6.8vw,80px)}
+.about-header p{margin-top:16px;font-size:15px;color:var(--sub);line-height:1.65;max-width:640px}
+
+.story-section{padding:60px 5vw;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .story-img-wrap{position:relative}
-.story-img-wrap img{width:100%;border-radius:4px;border:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.08)}
-.experience-badge{position:absolute;bottom:-25px;right:-25px;background:var(--ink);color:#fff;padding:26px 30px;border-left:4px solid var(--red);border-radius:2px}
-.experience-badge .yr{font-family:'Big Shoulders Display';font-size:48px;font-weight:900;color:var(--orange);line-height:1}
-.experience-badge .lbl{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#bbb;margin-top:6px}
-.story-content h2{font-size:clamp(32px,4vw,56px);line-height:.95;margin-bottom:24px}
-.story-content p{color:var(--sub);font-size:15px;line-height:1.75;margin-bottom:18px}
+.story-img-wrap img{width:100%;border-radius:4px;border:1px solid var(--line)}
+.experience-badge{position:absolute;bottom:-15px;right:-15px;background:var(--ink);color:#fff;padding:16px 20px;border-left:3px solid var(--red);border-radius:2px}
+.experience-badge .yr{font-family:'Big Shoulders Display';font-size:36px;font-weight:900;color:var(--orange);line-height:1}
+.experience-badge .lbl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;margin-top:4px}
+.story-content h2{font-size:clamp(28px,5vw,50px);margin-bottom:16px}
+.story-content p{color:var(--sub);font-size:14px;line-height:1.65;margin-bottom:14px}
 
-/* ---------- values / philosophy ---------- */
-.values-section{padding:90px 5vw;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:50px}
-.val-card{background:#fff;padding:36px 28px;border:1px solid var(--line);border-radius:3px;border-top:3px solid var(--red)}
-.val-card .num{font-family:'Big Shoulders Display';font-size:32px;color:var(--orange);font-weight:800;margin-bottom:12px}
-.val-card h3{font-size:24px;margin-bottom:12px}
-.val-card p{font-size:14px;color:var(--sub);line-height:1.65}
+.values-section{padding:60px 5vw;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.val-card{background:#fff;padding:26px 20px;border:1px solid var(--line);border-radius:3px;border-top:3px solid var(--red)}
+.val-card .num{font-family:'Big Shoulders Display';font-size:26px;color:var(--orange);font-weight:800;margin-bottom:8px}
+.val-card h3{font-size:20px;margin-bottom:8px}
+.val-card p{font-size:13px;color:var(--sub);line-height:1.6}
 
-/* ---------- training standards (replaces coach photos) ---------- */
-.training-standards{padding:100px 5vw;background:var(--panel2);border-top:1px solid var(--line)}
-.standards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.standard-card{background:#fff;padding:36px 30px;border:1px solid var(--line);border-radius:3px}
-.standard-card .badge{display:inline-block;background:var(--panel);color:var(--red);font-size:11px;font-weight:800;letter-spacing:.12em;padding:6px 12px;border-radius:2px;margin-bottom:18px;text-transform:uppercase}
-.standard-card h3{font-size:24px;margin-bottom:12px}
-.standard-card p{font-size:14px;color:var(--sub);line-height:1.7}
+.standards-section{padding:60px 5vw}
+.standards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.standard-card{background:var(--panel);padding:26px 20px;border:1px solid var(--line);border-radius:3px}
+.standard-card .badge{display:inline-block;background:#fff;color:var(--red);font-size:10px;font-weight:800;letter-spacing:.1em;padding:4px 8px;border-radius:2px;margin-bottom:12px;text-transform:uppercase;border:1px solid var(--line)}
+.standard-card h3{font-size:20px;margin-bottom:8px}
+.standard-card p{font-size:13px;color:var(--sub);line-height:1.6}
 
-/* ---------- footer ---------- */
-footer{border-top:1px solid var(--line);padding:70px 5vw 30px;background:#fff}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:60px}
-.fgrid h4{font-size:12px;letter-spacing:.2em;color:var(--sub);margin-bottom:18px}
-.fgrid a,.fgrid p{display:block;font-size:14px;color:var(--ink);opacity:.85;margin-bottom:10px}
-.fgrid a:hover{opacity:1;color:var(--red)}
-.fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--sub);font-size:12px;border-top:1px solid var(--line);padding-top:22px}
-
-@media(max-width:900px){
-  .story-section,.values-grid,.standards-grid,.fgrid{grid-template-columns:1fr}
-  .experience-badge{position:static;margin-top:16px}
+@media(max-width:880px){
+  .navlinks{display:none}
+  .hamburger{display:flex}
+  .about-header{padding-top:90px;padding-bottom:40px}
+  .story-section{grid-template-columns:1fr;gap:24px}
+  .experience-badge{position:static;margin-top:12px}
+  .values-grid,.standards-grid{grid-template-columns:1fr;gap:14px}
 }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="logo"><a href="index.html"><img src="logo (2).png" alt="RV Fitness World"></a></div>
   <div class="navlinks">
@@ -88,17 +82,28 @@ footer{border-top:1px solid var(--line);padding:70px 5vw 30px;background:#fff}
     <a href="about.html" class="active">About Us</a>
     <a href="contact.html">Contact</a>
   </div>
-  <a class="navcta" href="contact.html">Free Pass</a>
+  <div class="nav-actions">
+    <a class="navcta" href="contact.html">Free Pass</a>
+    <button class="hamburger" id="hamBtn" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- ABOUT HEADER -->
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">Flagship Floor (11,000 Sq Ft)</a>
+  <a href="crossfit.html">CrossFit Box Branch</a>
+  <a href="ac-gym.html">AC Gym Branch</a>
+  <a href="about.html">About RV Fitness</a>
+  <a href="contact.html">Contact & Directions</a>
+</div>
+
 <section class="about-header">
   <div class="eyebrow">OUR HERITAGE & MISSION</div>
   <h1>BUILT BY LIFTERS.<br>COMMITTED TO REAL HEALTH.</h1>
-  <p>Behind our motto "Health for Life" is an unwavering commitment to serious physical training, biomechanical discipline, and supportive floor coaching across Selaiyur.</p>
+  <p>Behind our motto "Health for Life" is an unwavering commitment to serious physical training, biomechanical discipline, and supportive floor coaching across Selaiyur[cite: 1].</p>
 </section>
 
-<!-- THE FOUNDING STORY -->
 <section class="story-section">
   <div class="story-img-wrap">
     <img src="storefront.jpg" alt="RV Fitness World Origin">
@@ -110,16 +115,15 @@ footer{border-top:1px solid var(--line);padding:70px 5vw 30px;background:#fff}
   <div class="story-content">
     <div class="eyebrow">THE RV PHILOSOPHY</div>
     <h2>Built For Members Who Prioritize Progress.</h2>
-    <p>RV Fitness World was established to raise the bar for fitness facilities in Tambaram and Selaiyur. We eliminated the frustrations of ordinary gyms: narrow aisles, broken equipment left unattended, and aggressive sales quotas replacing real fitness advice.</p>
-    <p>We designed an open-span strength facility on Agaram Main Road where members can train with authentic Precor commercial machinery, Olympic lifting bars, and uncompromised floor room.</p>
-    <p>Alongside our flagship floor, our Selaiyur network includes a specialized CrossFit Box and a dedicated AC Gym, providing focused training environments suited to your schedule.</p>
+    <p>RV Fitness World was established to raise the bar for fitness facilities in Tambaram and Selaiyur[cite: 1]. We eliminated the frustrations of ordinary gyms: narrow aisles, broken equipment left unattended, and aggressive sales quotas replacing real fitness advice.</p>
+    <p>We designed an open-span strength facility on Agaram Main Road where members can train with authentic Precor commercial machinery, Olympic lifting bars, and uncompromised floor room[cite: 1].</p>
+    <p>Alongside our flagship floor, our Selaiyur network includes a specialized CrossFit Box and a dedicated AC Gym, providing focused training environments suited to your schedule[cite: 1].</p>
   </div>
 </section>
 
-<!-- CORE PILLARS -->
 <section class="values-section">
   <div class="eyebrow">CORE PILLARS</div>
-  <h2 style="font-size:clamp(34px,5vw,60px)">The Standards We Uphold.</h2>
+  <h2 style="font-size:clamp(28px,5vw,48px)">The Standards We Uphold.</h2>
   <div class="values-grid">
     <div class="val-card">
       <div class="num">01</div>
@@ -139,10 +143,9 @@ footer{border-top:1px solid var(--line);padding:70px 5vw 30px;background:#fff}
   </div>
 </section>
 
-<!-- TRAINING STANDARDS -->
-<section class="training-standards">
+<section class="standards-section">
   <div class="eyebrow">COACHING STANDARDS</div>
-  <h2 style="font-size:clamp(34px,5vw,60px)">Floor Training Support.</h2>
+  <h2 style="font-size:clamp(28px,5vw,48px)">Floor Training Support.</h2>
   <div class="standards-grid">
     <div class="standard-card">
       <div class="badge">Everyday Protocol</div>
@@ -157,40 +160,16 @@ footer{border-top:1px solid var(--line);padding:70px 5vw 30px;background:#fff}
     <div class="standard-card">
       <div class="badge">Community Culture</div>
       <h3>Active Member Challenges</h3>
-      <p>We host regular strength benchmarks, body transformation leagues, and community fitness meets to keep workouts engaging and measurable throughout the year.</p>
+      <p>We host regular strength benchmarks, body transformation leagues, and community fitness meets to keep workouts engaging and measurable throughout the year[cite: 1].</p>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="fgrid">
-    <div>
-      <div class="logo"><img src="logo (2).png" alt="RV Fitness World" style="height:56px"></div>
-      <p style="margin-top:16px;color:var(--sub);font-size:14px">Tambaram's biggest standalone gym floor. Selaiyur, Chennai.</p>
-    </div>
-    <div>
-      <h4>SELAIYUR LOCATIONS</h4>
-      <a href="index.html">Flagship (11,000 Sq Ft)</a>
-      <a href="crossfit.html">CrossFit Box</a>
-      <a href="ac-gym.html">AC Gym</a>
-    </div>
-    <div>
-      <h4>COMPANY</h4>
-      <a href="about.html">About RV Fitness</a>
-      <a href="contact.html">Contact & Map</a>
-      <a href="contact.html">Book Free Pass</a>
-    </div>
-    <div>
-      <h4>VISIT FLAGSHIP</h4>
-      <p>No:26/25, 2nd Floor, Agaram Main Rd,<br>Balaji Nagar, Selaiyur, Chennai 600073</p>
-      <a href="tel:+919962886575">+91 99628 86575</a>
-    </div>
-  </div>
-  <div class="fbottom">
-    <div>© 2026 RV Fitness World. All rights reserved.</div>
-    <div>Open Daily · 06:00 – 22:00</div>
-  </div>
-</footer>
-
+<script>
+const hamBtn = document.getElementById('hamBtn');
+const mobMenu = document.getElementById('mobMenu');
+hamBtn.addEventListener('click', () => mobMenu.classList.toggle('open'));
+mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobMenu.classList.remove('open')));
+</script>
 </body>
 </html>
