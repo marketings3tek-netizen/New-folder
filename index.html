@@ -20,7 +20,7 @@ h1,h2,h3,.disp{font-family:'Big Shoulders Display',sans-serif;font-weight:800;le
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
 
-/* ---------- preloader ---------- */
+
 #preload{position:fixed;inset:0;background:var(--bg);z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .5s ease,visibility .5s}
 #preload .mark{font-family:'Big Shoulders Display';font-size:clamp(60px,18vw,140px);font-weight:900;color:transparent;-webkit-text-stroke:1px var(--red);position:relative;overflow:hidden;line-height:1}
 #preload .mark::after{content:'RV';position:absolute;left:0;top:0;color:var(--red);-webkit-text-stroke:0;width:0%;overflow:hidden;animation:fillmark 1.4s ease-out forwards}
@@ -31,7 +31,7 @@ img{max-width:100%;height:auto;display:block}
 #preload .pct{font-size:10px;letter-spacing:.25em;color:var(--sub)}
 #preload.done{opacity:0;visibility:hidden}
 
-/* ---------- navbar & mobile drawer ---------- */
+
 nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .logo img{height:46px;width:auto}
 .navlinks{display:flex;gap:24px;font-size:13px;letter-spacing:.06em;font-weight:700}
@@ -45,7 +45,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:
 .mob-menu.open{transform:translateY(0)}
 .mob-menu a{font-size:15px;font-weight:700;letter-spacing:.04em;padding-bottom:6px;border-bottom:1px solid var(--line)}
 
-/* ---------- hero ---------- */
 .hero{position:relative;padding:95px 5vw 36px;display:flex;flex-direction:column;justify-content:center}
 .hero-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
 .hero-eyebrow{font-size:11px;letter-spacing:.25em;color:var(--orange);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px}
@@ -69,7 +68,6 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:
 .statdock .num{font-family:'Big Shoulders Display';font-size:clamp(26px,5vw,42px);font-weight:800;color:var(--red);line-height:1}
 .statdock .lbl{font-size:10px;letter-spacing:.08em;color:var(--sub);text-transform:uppercase;margin-top:4px}
 
-/* ---------- why us ---------- */
 .why-section{background:var(--panel);padding:60px 5vw;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:32px}
 .why-card{background:#fff;padding:24px 20px;border:1px solid var(--line);border-radius:3px}
@@ -77,14 +75,12 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:500;display:flex;align-items:
 .why-card h3{font-size:20px;margin-bottom:8px}
 .why-card p{font-size:13px;color:var(--sub);line-height:1.55}
 
-/* ---------- marquee ---------- */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:12px 0;overflow:hidden}
 .marquee .track{display:flex;gap:40px;white-space:nowrap;animation:mq 22s linear infinite;width:max-content}
 .marquee span{font-family:'Big Shoulders Display';font-size:18px;font-weight:700;color:var(--sub);display:flex;align-items:center;gap:40px}
 .marquee span b{color:var(--red)}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ---------- section general ---------- */
 section{position:relative;padding:70px 5vw}
 .tag{font-size:11px;letter-spacing:.25em;color:var(--orange);font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .tag::before{content:'';width:24px;height:1px;background:var(--orange)}
@@ -92,7 +88,6 @@ section{position:relative;padding:70px 5vw}
 .sec-head h2{font-size:clamp(30px,6.5vw,60px)}
 .sec-head p{max-width:420px;color:var(--sub);font-size:14px;line-height:1.6}
 
-/* ---------- comparison ---------- */
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
 .barwrap{display:flex;flex-direction:column;gap:18px}
 .barrow{display:flex;align-items:center;gap:12px}
@@ -104,13 +99,11 @@ section{position:relative;padding:70px 5vw}
 .mesh-card{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--panel)}
 .mesh-card img{width:100%;aspect-ratio:16/10;object-fit:cover}
 
-/* ---------- gallery ---------- */
 .photo-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
 .photo-item{position:relative;overflow:hidden;border-radius:3px;border:1px solid var(--line);aspect-ratio:4/3}
 .photo-item img{width:100%;height:100%;object-fit:cover}
 .photo-item .cap{position:absolute;bottom:0;left:0;right:0;padding:14px 12px 8px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff;font-size:11px;font-weight:700}
 
-/* ---------- branches ---------- */
 .branches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .branch-card{background:var(--panel);padding:28px 20px;border:1px solid var(--line);display:flex;flex-direction:column}
 .branch-card .n{font-size:11px;color:var(--sub);letter-spacing:.15em;margin-bottom:12px}
@@ -118,19 +111,16 @@ section{position:relative;padding:70px 5vw}
 .branch-card p{color:var(--sub);font-size:13px;line-height:1.6}
 .branch-card .link{margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.05em;color:var(--red)}
 
-/* ---------- instagram ---------- */
 .insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
 .insta-tile{aspect-ratio:1/1;overflow:hidden;border-radius:3px;border:1px solid var(--line)}
 .insta-tile img{width:100%;height:100%;object-fit:cover}
 
-/* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;margin-bottom:40px}
 .fgrid h4{font-size:11px;letter-spacing:.15em;color:var(--sub);margin-bottom:14px}
 .fgrid a,.fgrid p{display:block;font-size:13px;color:var(--ink);opacity:.85;margin-bottom:8px}
 .fbottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--sub);font-size:11px;border-top:1px solid var(--line);padding-top:18px}
 
-/* ---------- mobile break rules ---------- */
 @media(max-width:880px){
   .navlinks{display:none}
   .hamburger{display:flex}
@@ -184,7 +174,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
   <a href="contact.html">Contact & Directions</a>
 </div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-layout">
     <div>
@@ -212,7 +201,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
 <section class="why-section">
   <div class="sec-head">
     <div>
@@ -247,7 +235,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
 
 <div class="marquee"><div class="track" id="mqtrack"></div></div>
 
-<!-- SCALE & FLOOR PLAN -->
 <section id="scale">
   <div class="sec-head">
     <div>
@@ -268,7 +255,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
   </div>
 </section>
 
-<!-- LIVE PHOTO GALLERY -->
 <section style="background:var(--panel)">
   <div class="sec-head">
     <div>
@@ -305,7 +291,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
   </div>
 </section>
 
-<!-- SELAIYUR LOCATIONS HUB -->
 <section>
   <div class="sec-head">
     <div>
@@ -336,7 +321,6 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
   </div>
 </section>
 
-<!-- INSTAGRAM FEED SECTION -->
 <section style="background:var(--panel)">
   <div class="sec-head">
     <div>
@@ -392,7 +376,7 @@ footer{border-top:1px solid var(--line);padding:50px 5vw 24px;background:#fff}
 </footer>
 
 <script>
-// mobile menu toggle
+
 const hamBtn = document.getElementById('hamBtn');
 const mobMenu = document.getElementById('mobMenu');
 hamBtn.addEventListener('click', () => {
@@ -402,12 +386,11 @@ mobMenu.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => mobMenu.classList.remove('open'));
 });
 
-// preloader dismiss
+
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('preload').classList.add('done'), 1000);
 });
 
-// stats counter
 const cio = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(!e.isIntersecting) return;
@@ -423,7 +406,7 @@ const cio = new IntersectionObserver(entries => {
 }, {threshold: 0.3});
 document.querySelectorAll('.count').forEach(c => cio.observe(c));
 
-// animated bars
+
 const bio = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
@@ -434,7 +417,7 @@ const bio = new IntersectionObserver(entries => {
 }, {threshold: 0.4});
 document.querySelectorAll('.barrow .fill').forEach(b => bio.observe(b));
 
-// marquee filler
+
 const mq = ['<b>11,000 SQ FT</b> FLAGSHIP','PRECOR COMMERCIAL EQUIPMENT','3 LOCATIONS IN <b>SELAIYUR</b>','MONTHLY POWERLIFTING MEETS'];
 document.getElementById('mqtrack').innerHTML = (mq.map(t => `<span>${t}</span>`).join('')).repeat(3);
 </script>
